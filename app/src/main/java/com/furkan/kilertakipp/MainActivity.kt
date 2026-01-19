@@ -11,25 +11,27 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.furkan.kilertakipp.ui.theme.KilerTakippTheme
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            KilerTakippTheme {
+            androidx.compose.material3.MaterialTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
+
+                    AuthScreen()
+                   /* Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
-                    )
+                    ) */
                 }
             }
         }
     }
 }
-
+/*
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
@@ -41,7 +43,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    KilerTakippTheme {
+    androidx.compose.material3.MaterialTheme {
         Greeting("Android")
     }
 }
+*/
